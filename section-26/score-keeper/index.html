@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <figure class="image">
+                            <img src="images/pingpong.jpg" alt="ping pong" class="">
+                        </figure>
+                        <div class="card-header is-2by1">
+                            <h2 class="card-header-title title is-4">Ping Pong Score Keeper</h2>
+                        </div>
+                        <div class="card-content">
+                            <h1 class="title is-1"><span class="score" id="player1Score">0</span> to <span class="score"
+                                    id="player2Score">0</span>
+                            </h1>
+
+                            <label for="targetSeletor" class="label is-large is-inline">Select target:</label>
+                            <div id="targetSelector" class="select is-rounded is-info ml-3">
+                                <select name="selectTarget" id="selectTarget" class="">
+                                    <option value="3">3</option>
+                                    <option value="5">5</option>
+                                    <option value="7">7</option>
+                                    <option value="11">11</option>
+                                    <option value="21">21</option>
+                                </select>
+                            </div>
+
+                            <p class="subtitle is-5 mt-5">Use the buttons below to keep score</p>
+                        </div>
+                        <footer class="card-footer">
+                            <button class="card-footer-item button is-large is-primary is-light" id="player1Btn">+
+                                Player
+                                1</button>
+                            <button class="card-footer-item button is-large is-primary is-light" id="player2Btn">+
+                                Player
+                                2</button>
+                            <button class="card-footer-item button is-large is-danger is-light"
+                                id="resetBtn">Reset</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
