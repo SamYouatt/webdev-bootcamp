@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<% layout('layouts/boilerplate') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= campground.title %> </title>
-</head>
-
-<body>
-    <h1><%= campground.title %> </h1>
-    <h2><%= campground.location %> </h2>
-    <a href="/campgrounds/<%= campground._id %>/edit">Edit campground</a>
-    <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-        <button>Delete</button>
-    </form>
-    <a href="/campgrounds">Back to all campgrounds</a>
-</body>
-
-</html>
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card mb-5">
+            <img src="<%= campground.image %> " class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title"><%= campground.title %> </h5>
+                    <h5 class="text-muted"><%= campground.location %> </h5>
+                    <p class="card-text mt-4"><%= campground.description %> </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">$<%= campground.price %>/night</li>
+            </ul>
+            <div class="card-body">
+                <a href="/campgrounds/<%= campground._id %>/edit" class="card-link btn btn-info">Edit</a>
+                <form class="d-inline ml-3" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
